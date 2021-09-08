@@ -1,0 +1,222 @@
+$bg-radius: 50%;
+$bg-border1: 2px solid black;
+$bg-border2: 2px solid Indigo;
+
+* {
+    box-sizing: border-box;
+  }
+body {
+  padding: 5px;
+}
+.box1-2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 5px 5px;
+  .box1 {
+    border: $bg-border1;
+  }
+  .box2 {
+    border: $bg-border1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+      .box2about {
+        padding: 10px;
+      }
+  }
+}
+
+.box3-9 {
+  margin-top: 5px;
+  display: grid;
+  grid-template-areas:
+  "A A B B"
+  "A A С С"
+  "A A C C";
+  grid-gap: 5px 5px;
+  .box3-6 {
+    border: $bg-border1;
+    grid-area: A;
+    overflow: scroll;
+    max-height: 500px;
+    .box3-6__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .box3 {
+        margin: 3px;
+        padding: 3px;
+        border: $bg-border2;
+      }
+      .box4 {
+        margin: 3px;
+        margin-top: 150px;
+        padding: 3px;
+        border: $bg-border2;
+      }
+      .box5 {
+        margin: 3px;
+        padding: 3px;
+        border: $bg-border2;
+      }
+      .box6 {
+        margin: 3px;
+        padding: 3px;
+        border: $bg-border2;
+      }
+      .box67 {
+        margin: 3px;
+        padding: 3px;
+        border: $bg-border2;
+      }
+    }
+  }
+
+  .box7-8 {
+    border: $bg-border1;
+    grid-area: B;
+    max-height: 235px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    .box7 {
+      margin: 3px;
+      height: 108px;
+      margin-right: 370px;
+      border: $bg-border2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .box7lorem {
+        padding: 10px;
+      }
+      .box7foto img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        padding: 3px;
+      }        
+    }
+    .box8 {
+      margin: 3px;
+      height: 108px;
+      margin-left: 370px;
+      border: $bg-border2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .box8lorem {
+        padding: 5px;
+      }
+      .box8foto img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        padding: 3px;
+      }    
+    }
+  }
+
+
+  .box9 {
+    height: 255px;  
+    border: $bg-border1;
+    grid-area: C;
+    background-image: url(../image/blk.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.box13 {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border: $bg-border1;
+  margin: 5px 5px 0px 0px; 
+} 
+.box13 span {
+  color: #212121;
+  font-size: 20 px;
+  display: inline-block;
+  padding-left: 100%;
+  animation: box13 15s infinite linear;
+}
+@-webkit-keyframes box13 {
+  0%{transform: translate(0, 0);}
+  100%{transform: translate(-100%, 0);}
+}
+@keyframes box13 {
+  0%{transform: translate(0, 0);}
+  100%{transform: translate(-100%, 0)}
+}
+  
+
+.box10-11 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .box10 {
+    width: 50%;
+    margin: 5px 5px 0px 0px;
+    height: 150px;  
+    border: $bg-border1;
+  }
+  .box11 {
+    width: 50%;
+    margin: 5px 0px 0px 0px;
+    height: 150px;  
+    border: $bg-border1;
+  }
+}
+
+.box12 {
+  height: 255px; 
+  margin-top: 5px; 
+  border: $bg-border1;
+  background-image: url(../image/basketball-banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1000px) {
+  .box3-9 .box7-8 .box7 {
+    margin: 3px;
+  }
+  .box3-9 .box7-8 .box8 {
+    margin: 3px;
+  }
+}
+
+@media (max-width: 600px) {
+  .box1-2 {
+    display: block;
+  }
+  .box1-2 .box1 {
+    margin-bottom: 5px;
+  }
+  .box3-9 {
+    font-size: 12px;
+  }
+  .box3-9 .box3-6 .box3-6__inner .box4 {
+    margin-top: 5px;
+  }
+  .box3-9 .box3-6 .box3-6__inner .box3 {
+    margin-top: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .box3-9 {
+    font-size: 8px;
+  }
+  .box10-11 {
+    display: block;
+  }
+  .box10-11 .box10 {
+    width: 100%;
+  }
+  .box10-11 .box11 {
+    width: 100%;
+  }
+}
